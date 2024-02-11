@@ -1,0 +1,22 @@
+const wrapper = document.querySelector(".wrapper");
+const question = document.querySelector(".question");
+const gif = document.querySelector(".gif");
+const yesBtn = document.querySelector(".yes-btn");
+const noBtn = document.querySelector(".no-btn");
+
+yesBtn.addEventListener("click", () => {
+    question.innerHTML = "Aaaaa I Like YOU tOOO";
+    gif.src = "https://media.giphy.com/media/5dUllWbKVlaqmMTvHb/giphy.gif";
+    const audio = document.getElementById("audio");
+});
+
+noBtn.addEventListener("mouseover", () => {
+    const noBtnRect = noBtn.getBoundingClientRect();
+    const maxX = window.innerWidth - noBtnRect.width;
+    const maxY = window.innerHeight - noBtnRect.height;
+
+    const randomX = Math.floor(Math.random() * maxX);
+    const randomY = Math.floor(Math.random() * maxY);
+    noBtn.style.left = randomX + "px";
+    noBtn.style.top = randomY + "px";
+});
